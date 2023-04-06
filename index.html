@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Colocando o ícone no título da página. -->
+    <link rel="icon" href="list-icon.svg" type="image/x-icon">
+
+    <!--Importando Icones-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--Importando o arquivo CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Colocando o título da página -->
+    <title>To-do List</title>
+</head>
+
+<!--Chama a função para mostrar a hora assim que atualiza a página -->
+<body onload="showCurrentTime()">
+
+    <!--Div para os icons-->
+    <div class="dateIcons">
+        <i class="uil-calendar-alt"></i>
+        <i class="uil-clock"></i>
+    </div>
+
+    <!--Div para o horário-->
+    <div class="dateInfo">
+        <div class="currentDate"></div>
+        <div class="dateTime"></div>
+    </div>
+
+    <!--lembrar de comentar-->
+    <div class="wrapper">
+
+        <!--Div com os controles das tarefas-->
+        <div class="controls">
+
+            <!--Filtros-->
+            <div class="filters">
+
+                <!--Usado o Span para estilizar de forma diferente-->
+                <span id="all" class="active">Todos</span>
+                <span id="pending">Pendente</span>
+                <span id="completed">Concluída</span>
+            </div>
+
+            <!--Botão para limpar tudo da lista-->
+            <button class="clear-btn">Apagar Tudo</button> 
+        </div>
+
+        <!--Div Com o Input de tarefas e icone-->
+        <div class="task-input">
+            <img src="bars-icon.svg">
+            <input type="text" placeholder="Qual a tarefa?">
+        </div>
+
+        <ul class="task-box"></ul>
+    </div>
+
+    <!--Importando o arquivo JS -->
+    <script src="index.js"></script>
+</body>
+</html>

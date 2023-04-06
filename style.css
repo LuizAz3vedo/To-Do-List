@@ -1,0 +1,297 @@
+/*Importando uma fonte do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
+
+/*Resetando o CSS e aplicando a font */ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/*Body da página */ 
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /*Gradiente da página */ 
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    
+}
+/*Pseudo-elemento CSS que permite estilizar o texto selecionado pelo usuário */
+::selection{
+    color: #fff;
+    background: #1715ff;
+}
+
+/*Estilizando a classe */
+.wrapper{
+    max-width: 450px;
+    background: #fff;
+    /*Posicionando o painel */
+    margin: 100px auto;
+    padding: 28px 0 30px;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px;
+}
+
+/*Estilizando a classe de icons */
+.dateIcons{
+    display: flex;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 7px;
+    justify-content: space-between;
+    font-size: 26px;
+}
+
+/*Estilizando a classe de info */
+.dateInfo{
+    display: flex;
+    max-width: 450px;
+    margin: 20px auto;
+    border-radius: 7px;
+    justify-content: space-between;
+    font-size: 26px;
+}
+
+
+/*Estilizando a classe */
+.task-input{
+    height: 72px;
+    padding: 0 25px;
+    padding-top: 10px;
+    position: relative;
+}
+
+/*Estilizando a imagem da classe */
+.task-input img{
+    top: 57%;
+    position: absolute;
+    /*Comentar */
+    transform: translate(17px, -50%);
+    max-width: 30px;
+}
+
+/*Estilizando o input da classe */
+.task-input input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 20px 0 53px;
+    border: 1px solid #999;
+}
+
+/*Estilizando o input quando está clicado */
+.task-input input:focus, .task-input input.active{
+    padding-left: 52px;
+    border: 2px solid #000000;
+}
+
+/*Estilizando o placeHolder do input */
+.task-input input::placeholder{
+    color: #000000;
+}
+
+/*Estilizando a li da classe controls */
+.controls, li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Estilizando a classe controls */
+.controls{
+    padding: 10px 25px;
+    padding-top: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+/*Estilizando os span classe filters */
+.filters span{
+    margin: 0 12px;
+    font-size: 17px;
+    color: #000000;
+    /*Estilizando o ponteiro do mouse */
+    cursor: pointer;
+}
+
+/*Estilizando o 1 span da classe filters */
+.filters span:first-child{
+    margin-left: 0;
+}
+
+/*Estilizando o span quando ativado classe controls */
+.filters span.active{
+    color: #1715ff;
+}
+
+/*Estilizando o botão da classe controls */
+.controls .clear-btn{
+  background: #1919f0;
+  border-radius: 999px;
+  box-shadow: #1919f0 0 10px 20px -10px;
+  box-sizing: border-box;
+  transition: transform 0.25s ease;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  outline: 0 solid transparent;
+  padding: 7px 13px;
+  border: 0;
+}
+
+/*Estilizando o botão ativado */
+.clear-btn.active{
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+/*Estilizando o botão, colocando uma animação de escala quando ativado */
+.clear-btn:active{
+    transform: scale(0.93);
+}
+
+/*Estilizando a classe da task-box */
+.task-box{
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 0 20px 10px 25px;
+}
+
+/*Estilizando o overflow da classe task-box */
+.task-box.overflow{
+    overflow-y: auto;
+    max-height: 300px;
+}
+/*Estilizando a barra de scroll da classe task-box */
+.task-box::-webkit-scrollbar{
+    width: 5px;
+}
+
+/*Estilizando a barra de scroll da classe task-box */
+.task-box::-webkit-scrollbar-track{
+    background: #a1a1a1;
+    border-radius: 25px;
+}
+
+/*Estilizando a barra de scroll da classe task-box */
+.task-box::-webkit-scrollbar-thumb{
+    background: #a1a1a1;
+    border-radius: 25px;
+}
+
+/*Estilizando as tarefas da classe task */
+.task-box .task{
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    align-items: flex-start;
+    border-bottom: 1px solid #000000;
+}
+
+/*Estilizando o ultimo filho de task*/
+.task-box .task:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+/*Estilizando o label de task*/
+.task-box .task label{
+    display: flex;
+    align-items: flex-start;
+}
+
+/*Estilizando o input do label de task-box*/
+.task-box label input{
+    margin-top: 7px;
+    accent-color: #1715ff;
+}
+
+/*Estilizando o label de p de task-box*/
+.task-box label p{
+    user-select: none;
+    margin-left: 12px;
+    word-wrap: break-word;
+}
+
+/*Estilizando o label de p checked*/
+.task label p.checked{
+    text-decoration: line-through;
+}
+
+/*Estilizando a classe settings de task-box*/
+.task-box .settings{
+    position: relative;
+}
+
+/*Estilizando a classe settings*/
+.settings :where(i, li){
+    cursor: pointer;
+}
+
+/*Estilizando a classe settings de task-menu*/
+.settings .task-menu{
+    z-index: 10;
+    right: -5px;
+    bottom: -65px;
+    padding: 5px 0;
+    background: #fff;
+    position: absolute;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: top right;
+    box-shadow: 0 0 6px ;
+    transition: transform 0.2s ease;
+}
+
+/*Estilizando a classe task e o ultimo filho e task-menu*/
+.task-box .task:last-child .task-menu{
+    bottom: 0;
+    transform-origin: bottom right;
+}
+
+/*Estilizando a classe task e o primeiro filho de task-menu*/
+.task-box .task:first-child .task-menu{
+    bottom: -65px;
+    transform-origin: top right;
+}
+
+/*Animando o show de task-menu*/
+.task-menu.show{
+    transform: scale(1);
+}
+
+/*Estilizando o li da classe task-menu*/
+.task-menu li{
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+/*Estilizando o ultimo filho de li da classe task-menu*/
+.task-menu li:last-child{
+    margin-bottom: 0;
+}
+
+/*Estilizando o hover de li da classe settings */
+.settings li:hover{
+    background: #f5f5f5;
+}
+
+/*Estilizando o I de li da classe settings*/
+.settings li i{
+    padding-right: 8px;
+}
+
