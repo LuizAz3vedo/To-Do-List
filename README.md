@@ -28,3 +28,5 @@ na lista.</p>
 
 <h3>Observações</h3>
 <p>Este projeto foi desenvolvido apenas para fins educacionais, possui armazenamento no localStorage para caso feche a página.</p>
+
+<h3>Link para a página: https://luizaz3vedo.github.io/To-Do-List/</h3>
